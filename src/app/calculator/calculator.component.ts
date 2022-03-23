@@ -117,20 +117,28 @@ export class CalculatorComponent implements OnInit {
     // if (this.input == '0') this.input = '';
   }
 
-  getSqrt(){
+  //Evalua la raiz inmediatamente sobre el input y sustituye su resultado en el mismo
+  getSqrt() {
     if (this.input != '') {
-        const num = Math.sqrt(Number(this.getLastOperand())).toString();
-        this.input = this.input.substr(0, this.input.length - this.getLastOperand().length);
-        this.input = this.input + num; 
+      const num = Math.sqrt(Number(this.getLastOperand())).toString();
+      this.input = this.input.substr(
+        0,
+        this.input.length - this.getLastOperand().length
+      );
+      this.input = this.input + num;
     }
   }
 
-  getExp(){
+  //Evalua la potencia 2 inmediatamente sobre el input y sustituye su resultado en el mismo
+  getExp() {
     if (this.input != '') {
-        console.log("Last operamd:", this.getLastOperand())
-        const num = Math.pow(Number(this.getLastOperand()), 2).toString();
-        this.input = this.input.substr(0, this.input.length - this.getLastOperand().length);
-        this.input = this.input + num; 
+      console.log('Last operamd:', this.getLastOperand());
+      const num = Math.pow(Number(this.getLastOperand()), 2).toString();
+      this.input = this.input.substr(
+        0,
+        this.input.length - this.getLastOperand().length
+      );
+      this.input = this.input + num;
     }
   }
 }
