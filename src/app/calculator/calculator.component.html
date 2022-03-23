@@ -1,0 +1,73 @@
+<!-- <div class="calculator container border rounded p-5">
+    <div class="row mb-2">
+        <input
+                type="text"
+                name="result"
+                class="result w-100 p-4 rounded text-right"
+                id="result"
+                value="{{input}}"
+                placeholder=""
+                readonly
+            />
+    </div>
+    <div class="row mb-2">
+        <button class="col-sm-3 p-2 bg-danger text-light border-danger rounded font-weight-bold" type="button" (click)="allClear()">C</button>
+        <button class="col-sm-3 p-2 border-warning rounded bg-warning text-dark font-weight-bold" type="button" (click)="clear()">Del</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressOperator('/')">/</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressOperator('%')">%</button>
+    </div>
+    <div class="row mb-2">
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressNum('7')">7</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressNum('8')">8</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressNum('9')">9</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressOperator('*')">X</button>
+    </div>
+    <div class="row mb-2">
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressNum('4')">4</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressNum('5')">5</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressNum('6')">6</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressOperator('-')">-</button>
+    </div>
+    <div class="row mb-2">
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressNum('1')">1</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressNum('2')">2</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressNum('3')">3</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressOperator('+')">+</button>
+    </div>
+    <div class="row justify-content-end">
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressNum('0')">0</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="pressNum('.')">.</button>
+        <button class="col-sm-3 p-2 rounded" type="button" (click)="getAnswer()">=</button>
+    </div>
+</div> -->
+
+<div class="calculator-container container p-0 justify-content-center">
+    <form class="w-100 h-100 p-2" name="calculator">
+        <input class="w-100 h-30 text-light p-4 text-right border-0 shadow-none" type="textfield" name="ans" value="{{input}}" autocomplete="off" readonly>
+
+        <input class="border-0 font-weight-bold p-4 bg-danger text-light" type="button" value="C" (click)="allClear()">
+        <input class="border-0 font-weight-bold p-4 bg-warning text-dark" type="button" value="Del" (click)="clear()">
+        <input class="border-0 font-weight-bold p-4 bg-primary text-light" type="button" value="x^2" (click)="getExp()">
+        <input class="border-0 font-weight-bold p-4 text-light bg-primary" type="button" value="√" (click)="getSqrt()">
+        <br>
+        <input class="border-0 font-weight-bold p-4 bg-dark text-light" type="button" value="7" (click)="pressNum('7')">
+        <input class="border-0 font-weight-bold p-4 bg-dark text-light" type="button" value="8" (click)="pressNum('8')">
+        <input class="border-0 font-weight-bold p-4 bg-dark text-light" type="button" value="9" (click)="pressNum('9')">
+        <input class="border-0 font-weight-bold p-4 text-light bg-primary" type="button" value="/" (click)="pressOperator('/')">
+        <br>
+        <input class="border-0 font-weight-bold p-4 bg-dark text-light" type="button" value="4" (click)="pressNum('4')">
+        <input class="border-0 font-weight-bold p-4 bg-dark text-light" type="button" value="5" (click)="pressNum('5')">
+        <input class="border-0 font-weight-bold p-4 bg-dark text-light" type="button" value="6" (click)="pressNum('6')">
+        <input class="border-0 font-weight-bold p-4 text-light bg-primary" type="button" value="X" (click)="pressOperator('*')">
+        <br>
+        <input class="border-0 font-weight-bold p-4 bg-dark text-light" type="button" value="1" (click)="pressNum('1')">
+        <input class="border-0 font-weight-bold p-4 bg-dark text-light" type="button" value="2" (click)="pressNum('2')">
+        <input class="border-0 font-weight-bold p-4 bg-dark text-light" type="button" value="3" (click)="pressNum('3')">
+        <input class="border-0 font-weight-bold p-4 text-light bg-primary" type="button" value="-" (click)="pressOperator('-')">
+        <br>
+        <input class="border-0 font-weight-bold p-4 bg-dark text-light" type="button" value="." (click)="pressNum('.')">
+        <input class="border-0 font-weight-bold p-4 bg-dark text-light" type="button" value="0" (click)="pressNum('0')">
+        <input class="border-0 font-weight-bold p-4 text-light bg-success" type="button" value="=" (click)="getAnswer()">
+        <input class="border-0 font-weight-bold p-4 text-light bg-primary" type="button" value="+" (click)="pressOperator('+')">
+    </form>
+</div>
